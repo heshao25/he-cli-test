@@ -1,0 +1,28 @@
+{
+  "name": "@he.test/cli",
+  "version": "0.0.0",
+  "description": "first test cli",
+  "author": "hewenxiang <291322416@qq.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "bin": {
+    "he-cli": "./bin/cli.js"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib",
+    "he"
+  ],
+  "scripts": {
+    "test": "node ./__tests__/cli.test.js"
+  },
+  "dependencies": {
+    "commander": "^10.0.1",
+    "import-local": "^3.1.0",
+    "npmlog": "^7.0.1"
+  }
+}
