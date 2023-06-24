@@ -1,0 +1,22 @@
+{
+  "name": "@he.test/utils",
+  "version": "0.0.0",
+  "description": "he.test utils",
+  "author": "hewenxiang <291322416@qq.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "node ./__tests__/utils.test.js"
+  },
+  "dependencies": {
+    "npmlog": "6.0.2"
+  }
+}

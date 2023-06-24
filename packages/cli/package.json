@@ -21,8 +21,9 @@
     "test": "node ./__tests__/cli.test.js"
   },
   "dependencies": {
+    "@he.test/init": "^0.0.0",
+    "@he.test/utils": "^0.0.0",
     "commander": "^10.0.1",
-    "import-local": "^3.1.0",
-    "npmlog": "^7.0.1"
+    "import-local": "^3.1.0"
   }
 }

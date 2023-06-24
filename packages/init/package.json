@@ -1,0 +1,23 @@
+{
+  "name": "@he.test/init",
+  "version": "0.0.0",
+  "description": "init command",
+  "author": "hewenxiang <291322416@qq.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "node ./__tests__/init.test.js"
+  },
+  "dependencies": {
+    "@he.test/command": "^0.0.0",
+    "@he.test/utils": "^0.0.0"
+  }
+}
