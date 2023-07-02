@@ -1,6 +1,6 @@
 
-const Command = require('@he.test/command')
-const log = require('@he.test/utils')
+import Command from '@he.test/command'
+import {log} from '@he.test/utils'
 
 class InitCommand extends Command {
   get command() {
@@ -14,7 +14,7 @@ class InitCommand extends Command {
       ['-f, --force', '是否强制初始化', false]
     ]
   }
-   action([name, opts]){
+  action([name, opts]){
     log.verbose('init', name,opts)
   }
 }
@@ -23,5 +23,5 @@ function init(instance){
   return new InitCommand(instance)
 }
 
-module.exports = init;
+export default  init;
 

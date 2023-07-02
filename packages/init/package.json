@@ -19,5 +19,6 @@
   "dependencies": {
     "@he.test/command": "^0.0.0",
     "@he.test/utils": "^0.0.0"
-  }
+  },
+  "type": "module"
 }

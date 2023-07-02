@@ -18,12 +18,23 @@
     "he"
   ],
   "scripts": {
-    "test": "node ./__tests__/cli.test.js"
+    "test": "jest"
   },
   "dependencies": {
     "@he.test/init": "^0.0.0",
     "@he.test/utils": "^0.0.0",
+    "chalk": "^5.3.0",
     "commander": "^10.0.1",
-    "import-local": "^3.1.0"
+    "dirname-filename-esm": "^1.1.1",
+    "fs-extra": "^11.1.1",
+    "import-local": "^3.1.0",
+    "semver": "^7.5.3"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "execa": "^7.1.1",
+    "jest": "^29.5.0"
   }
 }

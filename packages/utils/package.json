@@ -18,5 +18,6 @@
   },
   "dependencies": {
     "npmlog": "6.0.2"
-  }
+  },
+  "type": "module"
 }
