@@ -17,6 +17,7 @@
     "test": "node ./__tests__/utils.test.js"
   },
   "dependencies": {
+    "inquirer": "^9.2.7",
     "npmlog": "6.0.2"
   },
   "type": "module"
