@@ -3,6 +3,7 @@ import Command from '@he.test/command'
 import {log} from '@he.test/utils'
 import createTemplate from './createTemplate.js'
 import downloadTemplate from './downloadTemplate.js'
+import installTemplate from './installTemplate.js'
 
 class InitCommand extends Command {
   get command() {
@@ -13,7 +14,9 @@ class InitCommand extends Command {
   }
   get options() {
     return [
-      ['-f, --force', '是否强制初始化', false]
+      ['-f, --force', '是否强制初始化', false],
+      ['-t, --type <type>', '项目类型( parject / page )'], // 以命令的方式进行脚手架交互
+      ['-tp, --template <template>', '模板名称']
     ]
   }
   async action([name, opts]){
@@ -21,8 +24,9 @@ class InitCommand extends Command {
     // 1: 选择项目模板
     const selectedTemplatet = await createTemplate(name, opts)
     // 2: 下载项目模板至缓存目录
-     downloadTemplate(selectedTemplatet)
+    await downloadTemplate(selectedTemplatet)
     // 3: 安装项目至项目目录
+    await installTemplate(selectedTemplatet, opts)
   }
 }
 

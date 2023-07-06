@@ -71,12 +71,21 @@ function makeTargetPath() {
 }
 
 export default async function createTemplate(name, opts) {
+  const { type = null, template } = opts
   // 获取创建类型
-  const addType = await getAddType()
-  if(addType === 'project') {
-    const addName = await getAddName()
-    const addTemplate = await getAddTemplate()
-    const selectedTemplate = ADD_TEMPLATE.find(item => item.value === addTemplate)
+  let addType = type ? type : await getAddType()
+  if(addType === ADD_TYPE_PROJECT) {
+    const addName = name ? name : await getAddName()
+    let selectedTemplate
+    if(template){
+      selectedTemplate = ADD_TEMPLATE.find(item => item.value === template)
+      if(!selectedTemplate){
+        throw new Error('模板类型不存在') 
+      }
+    } else {
+      const addTemplate = await getAddTemplate()
+      selectedTemplate = ADD_TEMPLATE.find(item => item.value === addTemplate)
+    }
     // 获取package的最新版本号 通过npm的api..
     const latastVersion = await getLatestVersion(selectedTemplate.npmName)
     selectedTemplate.version = latastVersion
@@ -87,5 +96,9 @@ export default async function createTemplate(name, opts) {
       template:selectedTemplate,
       targetPath
     }
+  } else if(addType === ADD_TYPE_PAGE){
+    throw new Error('未完成')
+  } else {
+    throw new Error('类型不存在')
   }
 }
