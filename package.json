@@ -1,6 +1,6 @@
 {
   "name": "root",
-  "private": false,
+  "private": true,
   "workspaces": [
     "packages/*"
   ],
@@ -8,8 +8,5 @@
     "lerna": "^6.6.2"
   },
   "dependencies": {
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
