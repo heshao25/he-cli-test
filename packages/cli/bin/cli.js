@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 // 当我们本地node_modules存在一个脚手架命令，同时全局node_modules中也存在这个脚手架命令的时候，优先选用**本地node_modules**中的版本
 import importLocal  from 'import-local' // 当全局node_modules和本地node_modules中，存在相同的库，则优先加载本地node_modules中的库。
 import entry  from '../lib/index.js'
